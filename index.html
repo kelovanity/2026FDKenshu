@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#050516" />
+    <title>SGS Future Division Kenshu 2026</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="site-frame">
+      <header class="masthead">
+        <p>SGS FUTURE DIVISION</p>
+        <h1><span>KENSHU</span> <em>2026</em></h1>
+      </header>
+
+      <section class="main-grid" aria-label="Live RSVP tracker">
+        <aside class="region-card">
+          <h2>REGIONAL PROGRESS</h2>
+          <div class="live-line"><i></i><span>LIVE FROM GOOGLE SHEETS</span><time id="updated-time">—</time></div>
+          <ol id="region-list"></ol>
+        </aside>
+
+        <section class="phoenix-stage" aria-label="Phoenix reveal driven by RSVP progress">
+          <canvas id="phoenix-canvas"></canvas>
+          <p id="loading-message">Loading live RSVP progress…</p>
+        </section>
+      </section>
+
+      <section class="progress-card" aria-live="polite">
+        <div class="metric"><span>TOTAL RSVPS</span><strong id="rsvp-total">—</strong></div>
+        <div class="metric"><span>CURRENT TARGET</span><strong class="target" id="rsvp-target">—</strong></div>
+        <div class="completion"><div class="ring" id="progress-ring"><div><strong id="overall-progress">—</strong><span>COMPLETED</span></div></div></div>
+        <div class="progress-track"><i id="progress-fill"></i></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
